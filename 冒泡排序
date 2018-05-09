@@ -1,0 +1,25 @@
+
+#include "stdio.h"
+
+void BuddleSort(int *a,int len)
+{
+	int i,j,k,temp;
+	for(i=0;i<len-1;i++)
+	{
+		for(j=len-1;j>i;j--)
+		{
+			if(a[j-1]<a[j])
+			{
+				temp=a[j-1];
+				a[j-1]=a[j];
+				a[j]=temp;
+			}
+		}
+		printf("第%d步排序结果：",i);
+		for(k=0;k<len;k++)
+		{
+			printf("%d",a[k]);
+		}
+		printf("\n");
+	}
+}
